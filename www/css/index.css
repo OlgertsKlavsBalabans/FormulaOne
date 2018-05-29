@@ -45,6 +45,20 @@ body {
     width:100%;
 }
 
+
+#BigButton {
+	width: 300px;
+	padding: 20px;
+	cursor: pointer;
+	background: #0060ca;
+	color: #fcdc74;
+	border-radius: 10px;
+	border: 5px solid #090089;
+	font-size: 200%;
+	
+	
+}
+
 .rotate {
     -webkit-animation: spin 4s linear infinite;
     -moz-animation: spin 4s linear infinite;
