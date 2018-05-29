@@ -45,5 +45,10 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        // Spin???
+        var container = document.getElementById('Doom');
+        container.className += ' spinning';
+        //
+        parentElement.className += ' spinotherDirection';
     }
 };
