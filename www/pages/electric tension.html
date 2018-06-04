@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./../css/index.css" />
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
+    <title>Electric tension</title>
+</head>
+<body>
+    <h1>Electric tension</h1>
+	<h2>Presentation</h2>
+	<p>
+	Voltage, electric potential difference, electric pressure or electric tension 
+	(formally denoted ?V or ?U, but more often simply as V or U, for instance in the
+	context of Ohm's or Kirchhoff's circuit laws) is the difference in electric potential
+	between two points. The voltage between two points is equal to the work done per unit
+	of charge against a static electric field to move a test charge between two points.
+	This is measured in units of volts (a joule per coulomb); moving 1 coulomb of charge
+	across 1 volt of electric potential requires 1 joule of work.
+	</p>
+	<h2>now basics in circuit</h2>
+	<img src="ElecTenExoShow.gif" alt="Example Volt">
+	<h2>Exercise</h2>
+	<img src="ElecTenExo.png" alt="ElecTenExo">
+	<form name ="Exo">
+		<h3 id = "corect1">Exo1</h3>
+		<div>
+			=? <input type="text" name="Exo1"><br>
+		</div>
+		<h3 id = "corect2">Exo2</h3>
+		<div>
+			<input type="radio" name="Exo2" value="0">10
+			<input type="radio" name="Exo2" value="0">20
+			<input id ="corect" type="radio" name="Exo2" value="1">-10
+			<input type="radio" name="Exo2" value="0">5
+		</div>
+	</form>
+	<div>
+		<button type="submit" onclick = "check();">Submit</button>
+	</div>
+	
+	<div id ="chear" style = "visibility: hidden">
+		<h1>Chear</h1>
+		<p id ="answer"></p>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+	
+	function check(){
+	var Exo1 = document.Exo.Exo1.value
+	var Exo2 = document.Exo.Exo2.value
+	var corect = 0;
+	if (Exo2 == "1")
+	{
+	document.getElementById("corect2").style.color = "green";
+	corect ++;
+	}
+	if(Exo2 == "0")
+	{
+	document.getElementById("corect2").style.color = "red";
+	}
+	if(Exo2 == "")
+	{
+	document.getElementById("corect2").style.color = "Black";
+	}
+	
+	if (Exo1 == "900")
+	{
+	document.getElementById("corect1").style.color = "green";
+	corect ++;
+	}
+	if(Exo1 != "900")
+	{
+	document.getElementById("corect1").style.color = "red";
+	}
+	if(Exo1 == "")
+	{
+	document.getElementById("corect1").style.color = "Black";
+	}
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer").innerHTML = "you got " + corect +" corect answer";
+	}
+	
+	</script>
+	
+</body>
+</html>
