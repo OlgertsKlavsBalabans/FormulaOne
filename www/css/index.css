@@ -124,7 +124,6 @@ body {
 
 h1 {
     font-size:24px;
-    font-weight:normal;
     margin:0px;
     overflow:visible;
     padding:0px;
@@ -133,6 +132,17 @@ h1 {
 img {
     max-width: 100%;
     height: auto;
+}
+p {
+    overflow:visible;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+h2 {
+margin: 0;
+    padding: 0;    
 }
 
 .event {
