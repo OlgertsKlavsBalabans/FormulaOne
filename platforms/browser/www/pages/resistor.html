@@ -12,9 +12,10 @@
 	
     <title>Resistor</title>
 </head>
-
+    <div class = "wrapper">
 <body>
     <h1>Resistor</h1>
+    <div class = "physicsTextInfo">
 	<h2>Presentation</h2>
 	<p>
 	A resistor is a passive two-terminal electrical component that implements electrical resistance
@@ -26,11 +27,16 @@
 	voltage. Variable resistors can be used to adjust circuit elements (such as a volume control or a
 	lamp dimmer), or as sensing devices for heat, light, humidity, force, or chemical activity.
 	</p>
+        <br>
+        </div>
+    <div class="physicsImageInfo">
 	<h2>Formula + basics in circuit</h2>
 	<p>Ur = R * I or R = Ur/I or I = Ur/R</p>
 	<p> R = resistance <br>U = tention or voltage <br> I = Intensity in Ampere</p>
+                    <br>
 	<img src="./../img/ShowSerie.gif" alt="ShowSerie">
 	<img src="./../img/ResistorExo1.jpg" alt="Example + exo">
+            <br>
 	<p>
 	here and in other pages we will use N.A for numeral aplication
 	<br>first in reguar circuit U + U1 + U2 = 0 see <a href= "electric tension.html" style = "color:red" /> electric tension </a> to lear about  U
@@ -41,7 +47,8 @@
 	<br>U - Ur1 - Ur2 = 0 N.A 20 - 0,5 = <font style = "color:#00802b">19,5V</font> = Ur1
 	<br>Ur1 = R1 * I so R1 = Ur1/I N.A R1 = 19.5/5 = <font style = "color:#00802b">3.9 ohm</font>
 	</p>
-	
+            </div>
+    <div class="physicsExercise">
 	<form name ="Exo">
 		<h3 id = "corect1">Exo1</h3>
 		<p>same modele as the example with U = 50V, I = 0.5A, R2 = 1000 mohm</p>
@@ -58,7 +65,7 @@
 		</div>
 	
 	<div>
-		<button type="button" onclick = "check();">Submit</button>
+		<button class ="BigButton" type="button" onclick = "check();">Submit</button>
 	</div>
 	
 	 <div id ="chear" style = "visibility: hidden">
@@ -69,10 +76,17 @@
 			R1 = ? in ohm<input type="text" name="ExoB"><br>
 		</div>
 		<div>
-		<button type="button" onclick = "checkB();">Submit</button>
+		<button class ="BigButton" type="button" onclick = "checkB();">Submit</button>
 	</div>
 	<p id ="answerB"></p>
-	</div>
+	</div>         
+    </div>
+                <br>
+                	<form>
+            <input class= "BigButton" type="button" value="Electronics" onclick="window.location.href='./electronics.html'" />
+        </form>
+
+                </div>
 	<script type="text/javascript" charset="utf-8">
 	function check(){
 	var Exo1 = document.Exo.Exo1.value

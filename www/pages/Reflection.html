@@ -9,20 +9,20 @@
 </head>
 
 <body>
-
+    <div class="wrapper">
  <h1>Reflection</h1>
-
+ <div class="physicsImageInfo">
 <p>
 	The reflection is when the light bounces off an objet. The most common exemples are mirror and water. If you want to reflect the light, the objet you use need to be shiny. 
 	If the object is smooth, then the light will reflect at the same angle as it hit the surface, or else, for a rough surface it will reflect with a different angle.
 </p>
-
+<br>
 <img src="./../img/Reflection.jpg" >
 <br>
 <img src="./../img/Specular Reflection.jpg" >
 <br>
 <img src="./../img/Diffuse Reflection.jpg" >
-
+<br>
 
 <p>
 	Most of the things we see are because light from a source has reflected off it. The light will hit any kind of object and will be reflect in any direction. Then the reflected light will enter our eyes toward the retina,
@@ -59,10 +59,10 @@ Convex mirrors are useful for shop security and rear-view mirrors on vehicles be
 Parallel rays of light strike the mirror and are reflected outwards. If imaginary lines are traced back, they appear to come from a focal point behind the mirror.
 <br>
 <img src="./../img/Convex mirror.jpg" >
-
-
+<br>
+</div>
 	
-	
+<div class="physicsExercise">	
 	<h2>Exercise</h2>
 	<form name ="Exo">
 		<h3 id = "corect1">Exo1</h3>
@@ -81,7 +81,7 @@ Parallel rays of light strike the mirror and are reflected outwards. If imaginar
 		</div>
 	</form>
 	<div>
-		<button type="submit" onclick = "check();">Submit</button>
+		<button class= "BigButton" type="submit" onclick = "check();">Submit</button>
 	</div>
 	
 	<div id ="chear" style = "visibility: hidden">
@@ -93,7 +93,7 @@ Parallel rays of light strike the mirror and are reflected outwards. If imaginar
 		<h1>Good Job</h1>
 		<p id ="answer2"></p>
 	</div>
-	
+</div>
 	<script type="text/javascript" charset="utf-8">
 	
 	function check(){
@@ -157,9 +157,9 @@ if(corect == "2")
 
 
 	<form>
-           <input id= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
+           <input class= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
     </form>
-
+    </div>
 </body>
 
 </html>

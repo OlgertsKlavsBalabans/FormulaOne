@@ -12,8 +12,9 @@
 </head>
 
 <body>
-
+    <div class="wrapper">
  <h1>Refraction</h1>
+ <div class="physicsTextInfo">
 <br>
 <br>
 <p>
@@ -27,7 +28,7 @@ Without refraction, we wouldn’t be able to focus light onto our retina.
 
 <br>
 <img src="./../img/Refraction.png">
-
+<br>
 <p>
 When light travels from air into water, it slows down, causing it to change direction slightly.
 This change of direction is called refraction. When light enters a more dense substance (higher refractive index), it ‘bends’ more towards the normal line.
@@ -94,7 +95,9 @@ Violet light slows down even more than red light, so it is refracted at a slight
 A rainbow is formed when light enters each water droplet, and the different colours bend (refract) at slightly different angles.
 They reflect off the inside of the drop before refracting again as they leave.
 </p>
+<br>
 <img src="./../img/Rainbow.png">
+<br>
 <p>
 The secondary rainbow that can sometimes be seen is caused by each ray of light reflecting twice on the inside of each droplet before it leaves.
 <br>
@@ -106,8 +109,8 @@ Red is at the top for the primary rainbow, but in the secondary rainbow, red is 
 	
 <br>
 <br>
-	
-	
+</div>	
+ <div class="physicsExercise">
 	<h2>Exercise</h2>
 	<form name ="Exo">
 		<h3 id = "corect1">Exo1</h3>
@@ -115,7 +118,7 @@ Red is at the top for the primary rainbow, but in the secondary rainbow, red is 
 			 Will le light go upward or downward when doing inside the glass ? <br><input type="text" name="Exo1"><br>
 		</div>
 		<img src="./../img/Exo.png">
-
+                    
 		<h3 id = "corect2">Exo2</h3>
 		<div>
 		   The eye's crystalline is similar to :
@@ -126,7 +129,7 @@ Red is at the top for the primary rainbow, but in the secondary rainbow, red is 
 		</div>
 	</form>
 	<div>
-		<button type="submit" onclick = "check();">Submit</button>
+		<button class="BigButton" type="submit" onclick = "check();">Submit</button>
 	</div>
 	
 	<div id ="chear" style = "visibility: hidden">
@@ -138,7 +141,7 @@ Red is at the top for the primary rainbow, but in the secondary rainbow, red is 
 		<h1>Good Job</h1>
 		<p id ="answer2"></p>
 	</div>
-	
+        </div>
 	<script type="text/javascript" charset="utf-8">
 	
 	function check(){
@@ -199,10 +202,10 @@ if(corect == "2")
 <br>
 <br>
 	<form>
-           <input id= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
+           <input class= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
     </form>
 
-
+</div>
 </body>
 
 </html>

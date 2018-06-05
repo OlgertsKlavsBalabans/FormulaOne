@@ -47,7 +47,7 @@ body {
         );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
+    font-size:16px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -123,12 +123,33 @@ body {
 }
 
 h1 {
-    font-size:24px;
-    font-weight:normal;
+    font-size:30px;
     margin:0px;
     overflow:visible;
     padding:0px;
     text-align:center;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+p {
+    overflow:visible;
+    text-align:center;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    font-size:16px;
+}
+h2 {
+margin: 0;
+    padding: 0;  
+    font-size:24px;
+}
+h3 {
+  margin: 0;
+    padding: 0;  
+    font-size:18px;  
 }
 
 .event {
@@ -169,6 +190,7 @@ h1 {
 
 .wrapper {
     text-align: center;
+    font-weight: bold;
 }
 
 .physicsTextInfo {
