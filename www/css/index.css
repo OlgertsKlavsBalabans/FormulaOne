@@ -130,6 +130,10 @@ h1 {
     padding:0px;
     text-align:center;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 .event {
     border-radius:4px;
@@ -169,6 +173,7 @@ h1 {
 
 .wrapper {
     text-align: center;
+    font-weight: bold;
 }
 
 .physicsTextInfo {
