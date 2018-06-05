@@ -19,12 +19,12 @@
 /*
 colour scheme 
 hex
-#fab480 background body 1
-#faf180 background body 2
-#c6fa80 background formula 
-#89fa80 bacground image 
-#80fab4 background text 
-#80faf1 background excersice 
+#2e54fb background button
+#6e2efb background body 1
+#d52efb background body 2
+#fb2ebb bacground image
+#fb2e54 background text 
+#fb6f2e background excersice 
 */
 * {
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
@@ -34,16 +34,16 @@ body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#fab480;
-    background-image:linear-gradient(top, #faf180 0%, #fab480 51%);
-    background-image:-webkit-linear-gradient(top, #faf180 0%, #fab480 51%);
-    background-image:-ms-linear-gradient(top, #faf180 0%, #fab480 51%);
+    background-color:#6e2efb;
+    background-image:linear-gradient(top, #d52efb 0%, #6e2efb 51%);
+    background-image:-webkit-linear-gradient(top, #d52efb 0%, #6e2efb 51%);
+    background-image:-ms-linear-gradient(top, #d52efb 0%, #6e2efb 51%);
     background-image:-webkit-gradient(
         linear,
         left top,
         left bottom,
-        color-stop(0, #faf180),
-        color-stop(0.51, #fab480)
+        color-stop(0, #d52efb),
+        color-stop(0.51, #6e2efb)
         );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
@@ -59,7 +59,7 @@ body {
     width: 300px;
     padding: 20px;
     cursor: pointer;
-    background: #0060ca;
+    background: #2e54fb;
     color: #fcdc74;
     border-radius: 10px;
     border: 5px solid #090089;
@@ -170,23 +170,19 @@ h1 {
 .wrapper {
     text-align: center;
 }
-.physicsFormula {
-    background-color:#c6fa80;
 
-
-}
 .physicsTextInfo {
     
-    background-color:#80fab4;
+    background-color:#fb2e54;
 
 
 }
 
 .physicsImageInfo {
-    background-color:#89fa80;
+    background-color:#fb2ebb;
 
 }
 .physicsExercise {
-    background-color:#80faf1;
+    background-color:#fb6f2e;
  
 }
