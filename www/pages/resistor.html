@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./../css/index.css" />
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	
+    <title>Resistor</title>
+</head>
+
+<body>
+    <h1>Resistor</h1>
+	<h2>Presentation</h2>
+	<p>
+	A resistor is a passive two-terminal electrical component that implements electrical resistance
+	as a circuit element. In electronic circuits, resistors are used to reduce current flow, adjust
+	signal levels, to divide voltages, bias active elements, and terminate transmission lines, among
+	other uses. High-power resistors that can dissipate many watts of electrical power as heat, may
+	be used as part of motor controls, in power distribution systems, or as test loads for generators.
+	Fixed resistors have resistances that only change slightly with temperature, time or operating
+	voltage. Variable resistors can be used to adjust circuit elements (such as a volume control or a
+	lamp dimmer), or as sensing devices for heat, light, humidity, force, or chemical activity.
+	</p>
+	<h2>Formula + basics in circuit</h2>
+	<p>Ur = R * I or R = Ur/I or I = Ur/R</p>
+	<p> R = resistance <br>U = tention or voltage <br> I = Intensity in Ampere</p>
+	<img src="ShowSerie.gif" alt="ShowSerie">
+	<img src="ResistorExo1.jpg" alt="Example + exo">
+	<p>
+	here and in other pages we will use N.A for numeral aplication
+	<br>first in reguar circuit U + U1 + U2 = 0 see <a href= "electric tension.html" style = "color:red" /> electric tension </a> to lear about  U
+	<br>(in the example Ur1 and Ur2 are resistance they go in the oposit sens of the generators)
+	<br> U - Ur1 - Ur2 = 0 
+	<br>the generators devine often the positive sens so Ur1 and Ur2 are negative sens
+	<br>Here U = 20V ; I = 5A and R2 = 100 mohm then Ur2 = I * R2 N.A Ur2 = 5 * 0,1 = <font style = "color:#00802b">0,5V</font>
+	<br>U - Ur1 - Ur2 = 0 N.A 20 - 0,5 = <font style = "color:#00802b">19,5V</font> = Ur1
+	<br>Ur1 = R1 * I so R1 = Ur1/I N.A R1 = 19.5/5 = <font style = "color:#00802b">3.9 ohm</font>
+	</p>
+	
+	<form name ="Exo">
+		<h3 id = "corect1">Exo1</h3>
+		<p>same modele as the example with U = 50V, I = 0.5A, R2 = 1000 mohm</p>
+		<div>
+			R1 = ? in mohm<input type="text" name="Exo1"><br>
+		</div>
+		<h3 id = "corect2">Exo2</h3>
+		<p>same modele as the example with U = 220V, I = 2A, R2 = 100ohm</p>
+		<div>
+			<input type="radio" name="Exo2" value="1">10 ohm
+			<input type="radio" name="Exo2" value="0">20 ohm
+			<input id ="corect" type="radio" name="Exo2" value="0">-10 ohm
+			<input type="radio" name="Exo2" value="0">5 ohm
+		</div>
+	
+	<div>
+		<button type="button" onclick = "check();">Submit</button>
+	</div>
+	
+	 <div id ="chear" style = "visibility: hidden">
+		<p id ="answer"></p>
+		<h1 id = "corectB">Bonus exo</h1>
+		<p>same modele as the example with U = 8800V, I = 1A, R2 = 8.3 kohm</p>
+		<div>
+			R1 = ? in ohm<input type="text" name="ExoB"><br>
+		</div>
+		<div>
+		<button type="button" onclick = "checkB();">Submit</button>
+	</div>
+	<p id ="answerB"></p>
+	</div>
+	<script type="text/javascript" charset="utf-8">
+	function check(){
+	var Exo1 = document.Exo.Exo1.value
+	var Exo2 = document.Exo.Exo2.value
+	var corect = 0;
+	if (Exo2 == "1")
+	{
+	document.getElementById("corect2").style.color = "green";
+	corect ++;
+	}
+	if(Exo2 == "0")
+	{
+	document.getElementById("corect2").style.color = "red";
+	}
+	if(Exo2 == "")
+	{
+	document.getElementById("corect2").style.color = "Black";
+	}
+	
+	if (Exo1 == "9900")
+	{
+	document.getElementById("corect1").style.color = "green";
+	corect ++;
+	}
+	if(Exo1 != "9900")
+	{
+	document.getElementById("corect1").style.color = "red";
+	}
+	if(Exo1 == "")
+	{
+	document.getElementById("corect1").style.color = "Black";
+	}
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer").innerHTML = "you got " + corect +" corect answer";
+	if(corect == 2)
+	{
+	document.getElementById("chear").style.visibility = "visible";
+	}
+	}
+
+	function checkB()
+	{
+	var ExoB = document.Exo.ExoB.value
+	if (ExoB == "500")
+	{
+	document.getElementById("answerB").innerHTML = "you got a corect answer";
+	document.getElementById("corectB").style.color = "green";
+	}
+	if(ExoB != "500")
+	{
+	document.getElementById("corectB").style.color = "red";
+	}
+	if(ExoB == "")
+	{
+	document.getElementById("corectB").style.color = "Black";
+	}
+	}
+	
+	</script>
+</body>

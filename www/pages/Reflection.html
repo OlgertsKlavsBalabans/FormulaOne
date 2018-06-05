@@ -1,0 +1,165 @@
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./../css/index.css" />
+
+
+</head>
+
+<body>
+
+ <h1>Reflection</h1>
+
+<p>
+	The reflection is when the light bounces off an objet. The most common exemples are mirror and water. If you want to reflect the light, the objet you use need to be shiny. 
+	If the object is smooth, then the light will reflect at the same angle as it hit the surface, or else, for a rough surface it will reflect with a different angle.
+</p>
+
+<img src="Images/Reflection.jpg" >
+<br>
+<img src="Images/Specular Reflection.jpg" >
+<br>
+<img src="Images/Diffuse Reflection.jpg" >
+
+
+<p>
+	Most of the things we see are because light from a source has reflected off it. The light will hit any kind of object and will be reflect in any direction. Then the reflected light will enter our eyes toward the retina,
+	the brain will analyse this light and interprete it as an image of the object.
+	
+</p>
+<br>
+<p>
+	Thanks to this propertie of the light, it can be very usefull in different domain, like for exemple in astology or security.
+	The astology will use concave mirrors and security will use convex mirrors.
+
+</p>
+<br>
+<h3>Concave mirror</h3>
+<br>
+<p>
+The inside of a spoon is one exemple of convex mirror. 
+The deformation of the mirror will concentrate the light at a certain point called focal point.
+Concave mirrors are useful because they can make things seem larger.
+
+Concave mirrors are used in certain types of astronomical telescopes.
+The mirrors condense lots of light from faint sources in space onto a much smaller viewing area and allow the viewer to see far away objects and events in space that would be invisible to the naked eye.
+
+</p>
+
+<br>
+<img src="Images/Concave mirror.jpg" >
+
+<br>
+<h3>Convex mirror</h3>
+<br>
+
+Convex mirrors are useful for shop security and rear-view mirrors on vehicles because they give a wider field of vision.
+Parallel rays of light strike the mirror and are reflected outwards. If imaginary lines are traced back, they appear to come from a focal point behind the mirror.
+<br>
+<img src="Images/Convex mirror.jpg" >
+
+
+	
+	
+	<h2>Exercise</h2>
+	<form name ="Exo">
+		<h3 id = "corect1">Exo1</h3>
+		<div>
+			 r =? <input type="text" name="Exo1"><br>
+		</div>
+		<img src="Images/Exercice.png" >
+		
+		<h3 id = "corect2">Exo2</h3>
+		<div>
+		<p> A convex mirror is usefull for : 
+			<input type="radio" name="Exo2" value="1">Security
+			<input type="radio" name="Exo2" value="0">Astology
+			<input id ="corect" type="radio" name="Exo2" value="0">-10
+			<input type="radio" name="Exo2" value="0">Else
+		</div>
+	</form>
+	<div>
+		<button type="submit" onclick = "check();">Submit</button>
+	</div>
+	
+	<div id ="chear" style = "visibility: hidden">
+		<h1>Chear</h1>
+		<p id ="answer1"></p>
+	</div>
+	
+	<div id ="GJ" style = "visibility: hidden">
+		<h1>Good Job</h1>
+		<p id ="answer2"></p>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+	
+	function check(){
+	var Exo1 = document.Exo.Exo1.value
+	var Exo2 = document.Exo.Exo2.value
+	var corect = 0;
+	if (Exo2 == "1")
+	{
+	document.getElementById("corect2").style.color = "green";
+	corect ++;
+	}
+	if(Exo2 == "0")
+	{
+	document.getElementById("corect2").style.color = "red";
+	}
+	if(Exo2 == "")
+	{
+	document.getElementById("corect2").style.color = "Black";
+	}
+	
+	if (Exo1 == "35")
+	{
+	document.getElementById("corect1").style.color = "green";
+	corect ++;
+	}
+	if(Exo1 != "35")
+	{
+	document.getElementById("corect1").style.color = "red";
+	}
+	if(Exo1 == "")
+	{
+	document.getElementById("corect1").style.color = "Black";
+	}
+	
+if(corect == "2")
+	{
+	document.getElementById("chear").style.visibility = "hidden";
+	document.getElementById("GJ").style.visibility = "visible";
+	document.getElementById("answer2").innerHTML = "you got " + corect +" corect answer";
+	}if(corect == "1")
+	{
+	document.getElementById("GJ").style.visibility = "hidden";
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer1").innerHTML = "you got " + corect +" corect answer";
+	}if(corect == "0")
+	{
+	document.getElementById("GJ").style.visibility = "hidden";
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer1").innerHTML = "you got " + corect +" corect answer";
+	}
+	
+	}
+	
+	</script>
+	
+	
+
+
+<br>
+<br>
+
+
+	<form>
+           <input id= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+<html>
+
+<head>
+
+
+<meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./../css/index.css" />
+
+
+
+
+</head>
+
+<body>
+
+ <h1>Refraction</h1>
+<br>
+<br>
+<p>
+Refraction is the bending of light (it also happens with sound, water and other waves) as it passes from one transparent substance into another
+</p>
+
+<p>
+This bending by refraction makes it possible for us to have lenses, magnifying glasses, prisms and rainbows. Even our eyes depend upon this bending of light. 
+Without refraction, we wouldn’t be able to focus light onto our retina.
+</p>
+
+<br>
+<img src="Images/Refraction.png">
+
+<p>
+When light travels from air into water, it slows down, causing it to change direction slightly.
+This change of direction is called refraction. When light enters a more dense substance (higher refractive index), it ‘bends’ more towards the normal line.
+</p>
+<p>
+The amount of bending depends on two things:
+<br>
+_Change in speed
+<br>
+_Angle of the incident ray
+</p>
+<p>
+If light enters any substance with a higher refractive index (such as from air into glass) it slows down. The light bends towards the normal line.
+<br>
+If light travels enters into a substance with a lower refractive index (such as from water into air) it speeds up. The light bends away from the normal line.
+</p>
+<br>
+<h2>Lens</h2>
+<p>
+A lens is simply a curved block of glass or plastic. There are two kinds of lens.
+</p>
+
+<p>
+A biconvex lens is thicker at the middle than it is at the edges. This is the kind of lens used for photography.
+<br>
+Parallel rays of light can be focused in to a focal point. A biconvex lens is called a converging lens.
+</p>
+
+<br>
+<img src="Images/Biconvex.png">
+<br>
+<p>
+The crystalline of the eye is similar to a biconvex lens. The thickness of the crystalline will change depending on the distance between to eye and the object taht emits light
+<br>
+Tanks to that, the focal point is on the retina, and that allows us to see clearly.Otherwise we see blurry.
+</p>
+
+<br>
+<img src="Images/Eye.png">
+<br>
+
+<p>
+A biconcave lens curves is thinner at the middle than it is at the edges. Light rays refract outwards (spread apart) as they enter the lens and again as they leave.
+</p>
+<br>
+<img src="Images/Biconcave.png">
+<br>
+<br>
+<br>
+<h2>Refraction can create a spectrum</h2>
+<p>
+When white light shines through a prism, each colour refracts at a slightly different angle
+<br>
+ A prism can be used to show the seven colours of the spectrum that make up white light.
+</p>
+<br>
+<p>
+The explanation for the colours separating out is that the light is made of waves.
+<br>
+Violet light slows down even more than red light, so it is refracted at a slightly greater angle.
+</p>
+<br>
+<p>
+A rainbow is formed when light enters each water droplet, and the different colours bend (refract) at slightly different angles.
+They reflect off the inside of the drop before refracting again as they leave.
+</p>
+<img src="Images/Rainbow.png">
+<p>
+The secondary rainbow that can sometimes be seen is caused by each ray of light reflecting twice on the inside of each droplet before it leaves.
+<br>
+This second reflection causes the colours on the secondary rainbow to be reversed.
+<br>
+Red is at the top for the primary rainbow, but in the secondary rainbow, red is at the bottom.
+</p>
+
+	
+<br>
+<br>
+	
+	
+	<h2>Exercise</h2>
+	<form name ="Exo">
+		<h3 id = "corect1">Exo1</h3>
+		<div>
+			 Will le light go upward or downward when doing inside the glass ? <br><input type="text" name="Exo1"><br>
+		</div>
+		<img src="Images/Exo.png">
+
+		<h3 id = "corect2">Exo2</h3>
+		<div>
+		   The eye's crystalline is similar to :
+			<input type="radio" name="Exo2" value="0">Biconcave lens
+			<input id ="corect" type="radio" name="Exo2" value="1">Biconvex lens
+			<input type="radio" name="Exo2" value="0">Else
+			<input type="radio" name="Exo2" value="0">Photography
+		</div>
+	</form>
+	<div>
+		<button type="submit" onclick = "check();">Submit</button>
+	</div>
+	
+	<div id ="chear" style = "visibility: hidden">
+		<h1>Chear</h1>
+		<p id ="answer1"></p>
+	</div>
+	
+	<div id ="GJ" style = "visibility: hidden">
+		<h1>Good Job</h1>
+		<p id ="answer2"></p>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+	
+	function check(){
+	var Exo1 = document.Exo.Exo1.value
+	var Exo2 = document.Exo.Exo2.value
+	var corect = 0;
+	if (Exo2 == "1")
+	{
+	document.getElementById("corect2").style.color = "green";
+	corect ++;
+	}
+	if(Exo2 == "0")
+	{
+	document.getElementById("corect2").style.color = "red";
+	}
+	if(Exo2 == "")
+	{
+	document.getElementById("corect2").style.color = "Black";
+	}
+	
+	if (Exo1 == "Downward")
+	{
+	document.getElementById("corect1").style.color = "green";
+	corect ++;
+	}
+	if(Exo1 != "Downward")
+	{
+	document.getElementById("corect1").style.color = "red";
+	}
+	if(Exo1 == "")
+	{
+	document.getElementById("corect1").style.color = "Black";
+	}
+	
+if(corect == "2")
+	{
+	document.getElementById("chear").style.visibility = "hidden";
+	document.getElementById("GJ").style.visibility = "visible";
+	document.getElementById("answer2").innerHTML = "you got " + corect +" corect answer";
+	}if(corect == "1")
+	{
+	document.getElementById("GJ").style.visibility = "hidden";
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer1").innerHTML = "you got " + corect +" corect answer";
+	}if(corect == "0")
+	{
+	document.getElementById("GJ").style.visibility = "hidden";
+	document.getElementById("chear").style.visibility = "visible";
+	document.getElementById("answer1").innerHTML = "you got " + corect +" corect answer";
+	}
+	
+	}
+	
+	</script>
+	
+	
+
+<br>
+<br>
+	<form>
+           <input id= "BigButton" type="button" value="Optics" onclick="window.location.href='./Optics.html'" />
+    </form>
+
+
+</body>
+
+</html>
